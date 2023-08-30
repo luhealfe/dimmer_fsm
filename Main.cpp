@@ -6,18 +6,18 @@ using namespace dimmer;
 
 int main() {
   Dimmer d = Dimmer();
-	cout << "Brightness=" << d.GetBrightness() << endl;
-  
-  d.Switch();
-	cout << "Brightness=" << d.GetBrightness() << endl;
-
-	for(int i = 0; i < 5; i++) {
-  	d.ChangeBrightness();
-	}
-	cout << "Brightness=" << d.GetBrightness() << endl;
+  cout << "Brightness=" << d.GetBrightness() << endl;
 
   d.Switch();
-	cout << "Brightness=" << d.GetBrightness() << endl;
+  cout << "Brightness=" << d.GetBrightness() << endl;
 
-	return 0;
+  for (int i = 0; i < 25; i++) {
+    d.ChangeBrightness();
+    cout << "Brightness=" << d.GetBrightness() << endl;
+  }
+
+  d.Switch();
+  cout << "Brightness=" << d.GetBrightness() << endl;
+
+  return 0;
 }
